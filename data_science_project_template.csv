@@ -1,0 +1,20 @@
+id,folder_name,parent,minimal,readme_text
+1,data,root,1,Folder for storing subset data for experiments. It includes both raw data and processed data for temporary use.
+2,raw,data,1,"Storing the raw result which is generated from ""preparation"" folder code. My practice is storing a local subset copy rather than retrieving data from remote data store from time to time. It guarantees you have a static dataset for rest of action. Furthermore, we can isolate from data platform unstable issue and network latency issue."
+3,processed,data,1,"To shorten model training time, it is a good idea to persist processed data. It should be generated from 'processing' folder."
+4,src,root,1,"Stores source code (python, R etc) which serves multiple scenarios. During data exploration and model training, we have to transform data for particular purpose. We have to use same code to transfer data during online prediction as well. So it better separates code from notebook such that it serves different purpose."
+5,preparation,src,1,"Data ingestion such as retrieving data from CSV, relational database, NoSQL, Hadoop etc. We have to retrieve data from multiple sources all the time so we better to have a dedicated function for data retrieval."
+6,processing,src,1,Data cleaning and transformation to suit the needs of the model or eda
+7,modeling,src,1,"Model building source code. It should not just include model training part, but also evaluation part. On the other hand, we have to think about multiple models scenario. Typical use case is ensemble model such as combing Logistic Regression model and Neural Network model."
+8,visualize,src,0,Here you can store any graphs that you produce. Other code-driven
+9,test,root,0,visualizations or diagrams can be included here
+10,model,root,0,Folder for storing binary (json or other format) file for local use.
+11,notebook,root,1,Storing all notebooks including EDA and modeling stage.
+12,eda,notebook,1,"Exploratory Data Analysis (aka Data Exploration) is a step for exploring what you have for later steps. For short term purpose, it should show what you explored. Typical example is showing data distribution. For long term, it should store in centralized place."
+13,evaluation,notebook,0,"Besides modeling, evaluation is another important step. For people to trust the model, they must see how it performs"
+14,modeling,notebook,0,Notebook contains your  model building & training.
+15,poc,notebook,1,"Occasionally, you have to do some PoC (Proof-of-Concept). It can be show in here for temporary purposes."
+16,doc,root,0,Here you can store any documentation that you’ve written about your analysis. It can also be used as root directory for GitHub Pages to create a project website.
+17,profiling,root,0,Here you can store any scripts you use to benchmark and time your code.
+18,logs,root,0,Here you can store a log file of any work you’ve done on this project.
+19,reports,root,0,"Here you can store any output reports, such as HTML or LaTeX versions of tables, that you produce."
